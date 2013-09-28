@@ -68,12 +68,8 @@ module.exports = (grunt) ->
         files: ['index.html', 'static-dev/**/*.html', 'static-dev/**/*.hbs']
         tasks: ['copy']
       js:
-        files: ['static-dev/**/*.coffee', 'static-dev/**/*.js']
-        tasks: ['coffee', 'coffeelint']
-      json:
-        files: ['static-dev/app/properties.json']
+        files: ['static-dev/**/*.js']
         tasks: ['copy']
-
     
 
   grunt.loadNpmTasks 'grunt-coffeelint'
