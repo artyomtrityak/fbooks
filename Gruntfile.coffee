@@ -19,20 +19,15 @@ module.exports = (grunt) ->
         ]
 
     coffeelint:
-      app: ['static-dev/**/*.coffee','!**/vendor/**']
+      app: ['static-dev/**/*.coffee','!**/js/**']
 
     compass:
-      #options:
-      #  bundleExec: true
-      #  config: 'config.rb'
       dev:
         options:
           environment: 'development'
           outputStyle: 'expanded'
-      prod:
-        options:
-          environment: 'production'
-          outputStyle: 'compressed'
+          sassDir: 'static-dev/assets/scss'
+          cssDir: 'static-dev/assets/css'
 
     connect:
       server:
