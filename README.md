@@ -1,16 +1,8 @@
 FBooks
 ======
 
-Development:
+##Development:
 
-- `coffee -o static/ -cmw static-dev/` to run coffeescript compilation
+- npm install
 
-- OR add 
-
-```coffee
-coffee:
-  files: ['static-dev/**/*.coffee']
-  tasks: ['coffee', 'coffeelint']
-```
-
-to `watch` Gruntfile  section 
+- npm start
