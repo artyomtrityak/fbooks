@@ -13,6 +13,11 @@ body {
   margin: 0 auto -60px;
   /* Pad bottom by footer height */
   padding: 0 0 60px;
+
+
+  .content-container {
+    padding: 60px 15px 0;
+  }
 }
 
 /* Set the fixed height of the footer here */
