@@ -4,13 +4,10 @@ module.exports = function(grunt) {
 
     clean: ['builds/'],
 
-    compass: {
+    less: {
       dev: {
-        options: {
-          environment: 'development',
-          outputStyle: 'expanded',
-          sassDir: 'static/assets/scss',
-          cssDir: 'static/assets/css'
+        files: {
+          "static/assets/css/app.css": "static/assets/less/app.less"
         }
       }
     },
@@ -27,11 +24,11 @@ module.exports = function(grunt) {
 
     watch: {
       options: {
-        livereload: true,
+        livereload: true
       },
-      scss: {
-        files: ['static/**/*.scss', 'static/**/*.png'],
-        tasks: ['compass:dev']
+      less: {
+        files: ['static/**/*.less'],
+        tasks: ['less:dev']
       },
       html: {
         files: ['index.html', 'static/**/*.html', 'static/**/*.hbs'],
@@ -56,14 +53,14 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.loadNpmTasks('grunt-contrib-less');
   grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-requirejs');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jshint');
 
   grunt.registerTask('run', 'runs all tasks', function() {
-    var tasks = ['clean', 'jshint', 'compass:dev', 'connect', 'watch'];
+    var tasks = ['clean', 'jshint', 'less:dev', 'connect', 'watch'];
     grunt.option('force', true);
     grunt.task.run(tasks);
   });

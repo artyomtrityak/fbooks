@@ -3,7 +3,7 @@ FBooks
 
 ##Development:
 
-- Install Ruby & Compass
+- Install Node.js
 
 - npm install
 
