@@ -8,7 +8,7 @@ define(function(require) {
       HomeController = require('controllers/home');
 
   angular.bootstrap(document, [
-    'AppMain',
-    HomeController
+    app.name,
+    HomeController.name
   ]);
 });

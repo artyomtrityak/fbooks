@@ -14,7 +14,7 @@ define(function(require) {
       //Init module
       module = angular.module(MODULE_NAME, [
         'ngRoute',
-        mainMenuDirective
+        mainMenuDirective.name
       ]);
 
   module.config(['$routeProvider', function($routeProvider) {
@@ -33,5 +33,5 @@ define(function(require) {
   module.controller(MODULE_NAME+'.Home', Controller);
 
 
-  return MODULE_NAME;
+  return module;
 });

@@ -10,5 +10,5 @@ define(function(require) {
 
   module.directive('mainMenu', Directive);
 
-  return MODULE_NAME;
+  return module;
 });
