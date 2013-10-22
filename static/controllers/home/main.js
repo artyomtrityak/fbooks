@@ -1,8 +1,7 @@
 define(function(require) {
   'use strict';
 
-  var MODULE_NAME = 'HomeModule',
-      angular = require('angular'),
+  var angular = require('angular'),
       homeTemplate = require('text!./template.html'),
 
       //Controller
@@ -12,7 +11,7 @@ define(function(require) {
       mainMenuDirective = require('directives/main-menu'),
       
       //Init module
-      module = angular.module(MODULE_NAME, [
+      module = angular.module('homeController', [
         'ngRoute',
         mainMenuDirective.name
       ]);
@@ -21,7 +20,7 @@ define(function(require) {
       
     $routeProvider.when('/home', {
       template: homeTemplate,
-      controller: MODULE_NAME+'.Home'
+      controller: 'homeController.Home'
     });
 
     $routeProvider.otherwise({
@@ -30,7 +29,7 @@ define(function(require) {
     
   }]);
 
-  module.controller(MODULE_NAME+'.Home', Controller);
+  module.controller('homeController.Home', Controller);
 
 
   return module;
