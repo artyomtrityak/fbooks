@@ -3,7 +3,7 @@ requirejs.config({
   urlArgs: 'bust=' +  Date.now(),
   paths: {
     async: 'assets/js/async-0.2.9',
-    bootstrap: 'assets/js/bootstrap-3.0',
+    twbootstrap: 'assets/js/bootstrap-3.0',
     jquery: 'assets/vendor/jquery-1.10.2',
     text: 'assets/js/require-text-2.0.10',
     lodash: 'assets/js/lodash-2.1',
@@ -12,17 +12,23 @@ requirejs.config({
   },
 
   shim: {
-    bootstrap: ['jquery'],
+    twbootstrap: ['jquery'],
     angular: {
       exports: 'angular'
     },
     angularRoute: ['angular'],
-    application: ['angularRoute']
+    bootstrap: ['angularRoute']
   },
 
   packages: [
-    'controllers/home'
-  ]
+    // Controllers
+    'controllers/home',
+
+    //Directives
+    'directives/main-menu'
+  ],
+
+  deps: ['app']
 });
 
-requirejs(['application']);
+requirejs(['bootstrap']);
