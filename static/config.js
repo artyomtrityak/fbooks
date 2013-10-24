@@ -25,7 +25,8 @@ requirejs.config({
     'controllers/home',
 
     //Directives
-    'directives/main-menu'
+    'directives/main-menu',
+    'directives/main-search'
   ],
 
   deps: ['app']

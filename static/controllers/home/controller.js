@@ -2,7 +2,7 @@ define(function(require) {
   'use strict';
 
   return ['$scope', function ($scope) {
-    $scope.name = 'Artyom';
+    $scope.searchExample = 'Пехов Крадущийся в тени';
   }];
 
 });

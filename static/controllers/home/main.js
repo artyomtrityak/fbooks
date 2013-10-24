@@ -9,11 +9,13 @@ define(function(require) {
 
       // Directives
       mainMenuDirective = require('directives/main-menu'),
+      mainSearchDirective = require('directives/main-search'),
       
       //Init module
       module = angular.module('homeController', [
         'ngRoute',
-        mainMenuDirective.name
+        mainMenuDirective.name,
+        mainSearchDirective.name
       ]);
 
   module.config(['$routeProvider', function($routeProvider) {

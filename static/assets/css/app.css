@@ -27,3 +27,7 @@ body {
 #footer .container .credit {
   margin: 20px 0;
 }
+.screen-home .centered {
+  margin: 0 auto;
+  float: none;
+}
