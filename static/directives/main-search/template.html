@@ -2,15 +2,24 @@
   <div class="col-md-9 centered">
     <form role="form">
       <div class="input-group input-group-lg">
-        <input type="search" class="form-control input-lg" placeholder="Поиск книг">
+        
+        <input type="search"
+          data-ng-model="searchVal"
+          class="form-control input-lg"
+          placeholder="Поиск книг" />
+        
         <span class="input-group-btn">
-          <button class="btn btn-info" type="button">Найти</button>
+          <button class="btn btn-info" type="button" data-ng-click="onSearch()">
+            Найти
+          </button>
         </span>
+
       </div>
+      
       <span class="help-block">
-        Например, <abbr title="{{searchExample}}">{{searchExample}}</abbr>
+        Например, <abbr data-ng-attr-title="{{searchExample}}">{{searchExample}}</abbr>
       </span>
-    </form>
-    
+
+    </form>    
   </div>    
 </div>
