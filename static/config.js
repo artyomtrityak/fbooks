@@ -21,8 +21,8 @@ requirejs.config({
   },
 
   packages: [
-    // Controllers
-    'controllers/home',
+    // Screens
+    'screens/home',
 
     //Directives
     'directives/main-menu',

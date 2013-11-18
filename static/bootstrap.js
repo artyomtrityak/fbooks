@@ -5,7 +5,7 @@ define(function(require) {
       app = require('app'),
 
       // Screens
-      HomeController = require('controllers/home');
+      HomeController = require('screens/home');
 
   angular.bootstrap(document, [
     app.name,

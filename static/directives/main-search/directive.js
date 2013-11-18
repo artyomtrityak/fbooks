@@ -12,11 +12,13 @@ define(function(require) {
            searchExample: '='
         },
         link: function(scope, element, attrs, controller) {
-          //var searchVal = '';
           scope.onSearch = function() {
-            //console.log(searchVal);
             console.log(scope.searchVal);
-          }
+          };
+
+          scope.onHelp = function(text) {
+            scope.searchVal = text;
+          };
         }
       };
   };
