@@ -3,7 +3,7 @@ define(function(require) {
 
   var template = require('text!./template.html');
 
-  return function () {
+  return function (searchService) {
     return {
         restrict: 'A',
         replace: true,

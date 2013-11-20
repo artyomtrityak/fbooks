@@ -12,10 +12,8 @@ define(function(require) {
            activeItem: '@'
         },
         link: function(scope, element, attrs, controller) {
-          scope.getMenuClass = function(url) {
-            if (scope.activeItem === url) {
-              return 'active';
-            }
+          scope.isActive = function(url) {
+            return scope.activeItem === url;
           };
         }
       };

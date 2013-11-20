@@ -3,19 +3,19 @@ define(function(require) {
 
   var angular = require('angular'),
       homeTemplate = require('text!./template.html'),
-
-      //Controller
       Controller = require('./controller'),
 
       // Directives
-      mainMenuDirective = require('directives/main-menu'),
-      mainSearchDirective = require('directives/main-search'),
+      mainMenuDirective = require('shared/directives/main-menu'),
+
+      // Modules
+      searchModule = require('modules/search'),
       
       //Init module
       module = angular.module('homeController', [
         'ngRoute',
         mainMenuDirective.name,
-        mainSearchDirective.name
+        searchModule.name
       ]);
 
   module.config(['$routeProvider', function($routeProvider) {

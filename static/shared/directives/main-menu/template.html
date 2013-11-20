@@ -14,8 +14,12 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
-          <li data-ng-class="getMenuClass('/home')"><a href="#!/">Поиск книг</a></li>
-          <li data-ng-class="getMenuClass('/top')"><a href="#!/top">Рейтинг</a></li>
+          <li data-ng-class="{'active': isActive('/home')}">
+            <a href="#!/">Поиск книг</a>
+          </li>
+          <li data-ng-class="{'active': isActive('/top')}">
+            <a href="#!/top">Рейтинг</a>
+          </li>
         </ul>
         
         <ul class="nav navbar-nav navbar-right">

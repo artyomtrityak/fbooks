@@ -25,8 +25,10 @@ requirejs.config({
     'screens/home',
 
     //Directives
-    'directives/main-menu',
-    'directives/main-search'
+    'shared/directives/main-menu',
+
+    //Modules
+    'modules/search'
   ],
 
   deps: ['app']
