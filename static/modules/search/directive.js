@@ -13,7 +13,10 @@ define(function(require) {
         },
         link: function(scope, element, attrs, controller) {
           scope.onSearch = function() {
-            console.log(scope.searchVal);
+            var onResponse = searchService.searchBooks(scope.searchVal);
+            onResponse.then(function(data) {
+              console.log('search done', data);
+            });
           };
 
           scope.onHelp = function(text) {

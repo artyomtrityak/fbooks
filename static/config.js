@@ -4,20 +4,25 @@ requirejs.config({
   paths: {
     async: 'assets/js/async-0.2.9',
     twbootstrap: 'assets/js/bootstrap-3.0',
-    jquery: 'assets/vendor/jquery-1.10.2',
+    jquery: 'assets/js/jquery-1.10.2',
     text: 'assets/js/require-text-2.0.10',
     lodash: 'assets/js/lodash-2.1',
-    angular: 'assets/js/angular-1.2.0',
-    angularRoute: 'assets/js/angular-route'
+    angular: 'assets/js/angular-1.2.2',
+    angularRoute: 'assets/js/angular-route',
+    angularMock: 'assets/js/angular-mock',
+    angularResource: 'assets/js/angular-resource'
   },
 
   shim: {
     twbootstrap: ['jquery'],
     angular: {
+      deps: ['jquery'],
       exports: 'angular'
     },
     angularRoute: ['angular'],
-    bootstrap: ['angularRoute']
+    angularMock: ['angular'],
+    angularResource: ['angular'],
+    bootstrap: ['angularRoute', 'angularMock', 'angularResource']
   },
 
   packages: [
