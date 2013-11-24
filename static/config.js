@@ -13,6 +13,12 @@ requirejs.config({
     angularResource: 'assets/js/angular-resource'
   },
 
+  config: {
+    app: {
+      serverMocks: true
+    }
+  },
+
   shim: {
     twbootstrap: ['jquery'],
     angular: {

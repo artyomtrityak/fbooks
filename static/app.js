@@ -1,21 +1,27 @@
-define(function(require) {
+define(function(require, exports, module) {
   'use strict';
 
   var angular = require('angular'),
       serverMocks = require('shared/server-mocks'),
-      app = angular.module('AppMain', ['ngResource']);
+      app = angular.module('AppMain', ['ngResource']),
+      config = module.config();
+
+  config = config || {};
 
   app.config(['$locationProvider', '$provide',
     function($locationProvider, $provide) {
     $locationProvider.hashPrefix('!');
     $locationProvider.html5Mode(false);
-    
-    //TODO: make from config variable
-    $provide.decorator('$httpBackend', createHttpBackendMock); 
+
+    if (config.serverMocks) {
+      $provide.decorator('$httpBackend', createHttpBackendMock); 
+    }
 
   }]);
 
-  app.run(serverMocks);
+  if (config.serverMocks) {
+    app.run(serverMocks);
+  }
 
   return app;
 });
