@@ -5,10 +5,12 @@ define(function(require) {
       app = require('app'),
 
       // Screens
-      HomeController = require('screens/home');
+      HomeScreen = require('screens/home'),
+      SearchScreen = require('screens/search');
 
   angular.bootstrap(document, [
     app.name,
-    HomeController.name
+    HomeScreen.name,
+    SearchScreen.name
   ]);
 });

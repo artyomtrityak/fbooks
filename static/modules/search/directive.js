@@ -1,21 +1,28 @@
 define(function(require) {
   'use strict';
 
-  var template = require('text!./template.html');
+  var template = require('text!./templates/template.html');
 
-  return function (searchService) {
+  return ['searchService',
+    function (searchService, $location) {
     return {
         restrict: 'A',
         replace: true,
         template: template,
         scope: {
-           searchExample: '='
+           searchExample: '=',
+           onSearchDone: '&'
         },
         link: function(scope, element, attrs, controller) {
           scope.onSearch = function() {
-            var onResponse = searchService.searchBooks(scope.searchVal);
+            scope.onSearchDone({searchInput: scope.searchVal});
+          };
+
+          scope.onTypeahead = function(searchVal) {
+            var onResponse = searchService.searchBooks(searchVal);
             onResponse.then(function(data) {
-              console.log('search done', data);
+              //TODO: show typeahead
+              console.log('br:', data);
             });
           };
 
@@ -24,5 +31,5 @@ define(function(require) {
           };
         }
       };
-  };
+  }];
 });

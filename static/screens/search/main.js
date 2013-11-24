@@ -2,7 +2,7 @@ define(function(require) {
   'use strict';
 
   var angular = require('angular'),
-      homeTemplate = require('text!./templates/home.html'),
+      searchTemplate = require('text!./templates/search.html'),
       Controller = require('./controller'),
 
       // Directives
@@ -13,7 +13,7 @@ define(function(require) {
       booksModule = require('modules/books'),
       
       //Init module
-      module = angular.module('homeScreen', [
+      module = angular.module('searchScreen', [
         'ngRoute',
         mainMenuDirective.name,
         searchModule.name,
@@ -22,18 +22,14 @@ define(function(require) {
 
   module.config(['$routeProvider', function($routeProvider) {
       
-    $routeProvider.when('/home', {
-      template: homeTemplate,
-      controller: 'homeScreen.Home'
-    });
-
-    $routeProvider.otherwise({
-      redirectTo: '/home'
+    $routeProvider.when('/search', {
+      template: searchTemplate,
+      controller: 'searchScreen.Search'
     });
     
   }]);
 
-  module.controller('homeScreen.Home', Controller);
+  module.controller('searchScreen.Search', Controller);
 
 
   return module;

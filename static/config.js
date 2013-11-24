@@ -34,12 +34,14 @@ requirejs.config({
   packages: [
     // Screens
     'screens/home',
+    'screens/search',
 
     //Directives
     'shared/directives/main-menu',
 
     //Modules
-    'modules/search'
+    'modules/search',
+    'modules/books'
   ],
 
   deps: ['app']

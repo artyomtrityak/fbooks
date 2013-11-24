@@ -6,7 +6,7 @@ define(function(require) {
       var onResponse = $http({
           url: '/books', 
           method: "GET",
-          params: {search: search}
+          params: {q: search, limit: 10}
        });
 
       onResponse.catch(function() {

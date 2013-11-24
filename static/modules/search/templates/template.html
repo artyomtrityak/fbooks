@@ -3,7 +3,7 @@
     <form role="form">
       <div class="input-group input-group-lg">
         
-        <input type="search"
+        <input type="search" ng-keyup="onTypeahead(searchVal)"
           data-ng-model="searchVal"
           class="form-control input-lg"
           placeholder="Поиск книг" />
