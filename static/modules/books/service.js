@@ -1,11 +1,16 @@
 define(function(require) {
   'use strict';
 
-  var Model = require('./model');
+  return ['booksModel', function (booksModel) {
+    var getTopBooks = function() {
+      return booksModel.query({
+        limit: 20,
+        type: 'top'
+      });
+    };
 
-  return ['$http', function ($http) {
     return {
-      
+      getTopBooks: getTopBooks
     };
   }];
 });

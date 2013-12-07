@@ -9,7 +9,8 @@ define(function(require) {
         replace: true,
         template: menuTemplate,
         scope: {
-           activeItem: '@'
+           activeItem: '@',
+           showSearch: '@'
         },
         link: function(scope, element, attrs, controller) {
           scope.isActive = function(url) {

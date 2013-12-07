@@ -4,6 +4,7 @@ define(function(require) {
   var angular = require('angular'),
       PopularDirective = require('./popular-directive'),
       RecentDirective = require('./recent-directive'),
+      Model = require('./model'),
       Service = require('./service'),
 
       //Init module
@@ -12,6 +13,7 @@ define(function(require) {
   
   module.directive('booksPopularDirective', PopularDirective);
   module.directive('booksRecentDirective', RecentDirective);
+  module.factory('booksModel', Model);
   module.factory('booksService', Service);
 
   return module;

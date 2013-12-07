@@ -2,8 +2,8 @@ define(function(require) {
   'use strict';
 
   var books = [
-    {id: 1, name: 'Book test', author: 'Pehov'},
-    {id: 2, name: 'Book test 2', author: 'Salavadore'}
+    {id: 1, name: 'Book test', author: 'Pehov', date: '12/11/2013'},
+    {id: 2, name: 'Book test 2', author: 'Salavadore', date: '02/05/2013'}
   ];
 
   var regexpUrl = function(regexp) {
