@@ -9,7 +9,6 @@ define(function(require) {
         replace: true,
         template: template,
         scope: {
-           
         },
         link: function(scope, element, attrs, controller) {
           

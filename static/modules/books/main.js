@@ -2,10 +2,10 @@ define(function(require) {
   'use strict';
 
   var angular = require('angular'),
-      PopularDirective = require('./popular-directive'),
-      RecentDirective = require('./recent-directive'),
-      Model = require('./model'),
-      Service = require('./service'),
+      PopularDirective = require('./directives/popular-directive'),
+      RecentDirective = require('./directives/recent-directive'),
+      Model = require('./services/model'),
+      Service = require('./services/service'),
 
       //Init module
       module = angular.module('books', []);

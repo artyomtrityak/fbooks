@@ -32,6 +32,9 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.f-cursor-hand {
+  cursor: pointer;
+}
 .screen-home .centered {
   margin: 0 auto;
   float: none;
@@ -39,4 +42,7 @@ body {
 .screen-home .f-list-book-date {
   text-align: right;
   margin-top: 15px;
+}
+.screen-home .f-list-votes {
+  margin-top: 4px;
 }
