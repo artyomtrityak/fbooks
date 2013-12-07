@@ -13,14 +13,18 @@
       />
     </div>
     <div class="col-md-7">
-      <div>
-        {{book.author}}
+      <div class="f-ellipsis-text">
+        <a data-ng-href="#!/books/{{book.id}}" class="text-primary">
+          {{book.name}}
+        </a>
       </div>
       <div class="f-ellipsis-text">
-        {{book.name}}
+        <a data-ng-href="#!/authors/{{book.authorId}}" class="text-muted">
+          {{book.author}}
+        </a>
       </div>
       <div>
-        <!-- like / vote buttons !-->
+        <!-- like / vote buttons / ratio !-->
       </div>
 
     </div>
@@ -30,5 +34,9 @@
   </div>
 
   <hr data-ng-repeat-end="" />
+
+  <div class="pull-right">
+    <a href="#!/books/popular">Еще</a>
+  </div>
 
 </div>

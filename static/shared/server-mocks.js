@@ -2,8 +2,34 @@ define(function(require) {
   'use strict';
 
   var books = [
-    {id: 1, name: 'Book test', author: 'Pehov', date: '12/11/2013'},
-    {id: 2, name: 'Book test 2', author: 'Salavadore', date: '02/05/2013'}
+    {
+      id: 1,
+      name: 'Кардонийская рулетка',
+      author: 'Вадим Панов',
+      date: 'сентябрь 2012',
+      authorId: 1
+    },
+    {
+      id: 2,
+      name: 'Заклинатели',
+      author: 'Алексей Пехов',
+      date: 'ноябрь 2011',
+      authorId: 2
+    },
+    {
+      id: 3,
+      name: 'Огни небес',
+      author: 'Роберт Джордан',
+      date: 'апрель 1994',
+      authorId: 3
+    },
+    {
+      id: 4,
+      name: 'Наложницы Ненависти',
+      author: 'Вадим Панов',
+      date: 'июнь 2003',
+      authorId: 1
+    }
   ];
 
   var regexpUrl = function(regexp) {
