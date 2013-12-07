@@ -24,7 +24,7 @@ define(function(require) {
       
     $routeProvider.when('/home', {
       template: homeTemplate,
-      controller: 'homeScreen.Home'
+      controller: 'homeScreen.HomeController'
     });
 
     $routeProvider.otherwise({
@@ -33,8 +33,7 @@ define(function(require) {
     
   }]);
 
-  module.controller('homeScreen.Home', Controller);
-
+  module.controller('homeScreen.HomeController', Controller);
 
   return module;
 });

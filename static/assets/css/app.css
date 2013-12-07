@@ -27,7 +27,16 @@ body {
 #footer .container .credit {
   margin: 20px 0;
 }
+.f-ellipsis-text {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .screen-home .centered {
   margin: 0 auto;
   float: none;
+}
+.screen-home .f-list-book-date {
+  text-align: right;
+  margin-top: 15px;
 }

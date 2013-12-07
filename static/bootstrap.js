@@ -9,6 +9,7 @@ define(function(require) {
       SearchScreen = require('screens/search');
 
   angular.bootstrap(document, [
+    'ngRoute',
     app.name,
     HomeScreen.name,
     SearchScreen.name

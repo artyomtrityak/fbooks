@@ -14,7 +14,6 @@ define(function(require) {
       
       //Init module
       module = angular.module('searchScreen', [
-        'ngRoute',
         mainMenuDirective.name,
         searchModule.name,
         booksModule.name
@@ -24,13 +23,12 @@ define(function(require) {
       
     $routeProvider.when('/search', {
       template: searchTemplate,
-      controller: 'searchScreen.Search'
+      controller: 'searchScreen.SearchController'
     });
     
   }]);
 
-  module.controller('searchScreen.Search', Controller);
-
+  module.controller('searchScreen.SearchController', Controller);
 
   return module;
 });

@@ -22,7 +22,6 @@ define(function(require) {
             var onResponse = searchService.searchBooks(searchVal);
             onResponse.then(function(data) {
               //TODO: show typeahead
-              console.log('br:', data);
             });
           };
 
