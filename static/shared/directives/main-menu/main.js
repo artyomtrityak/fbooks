@@ -7,7 +7,7 @@ define(function(require) {
       //Init module
       module = angular.module('menu.Main', []);
 
-  module.directive('mainMenu', Directive);
+  module.directive('mainMenuDirective', Directive);
 
   return module;
 });
