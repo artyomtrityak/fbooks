@@ -3,7 +3,7 @@ define(function(require, exports, module) {
 
   var angular = require('angular'),
       serverMocks = require('shared/server-mocks'),
-      app = angular.module('AppMain', ['ngResource']),
+      app = angular.module('AppMain', ['ngResource', 'ngRoute']),
       config = module.config() || {};
 
   app.config(['$locationProvider', '$provide',

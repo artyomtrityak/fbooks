@@ -34,6 +34,7 @@ requirejs.config({
   packages: [
     // Screens
     'screens/home',
+    'screens/top',
     'screens/search',
 
     //Directives

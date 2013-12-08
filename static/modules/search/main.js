@@ -2,7 +2,8 @@ define(function(require) {
   'use strict';
 
   var angular = require('angular'),
-      Directive = require('./directive'),
+      SearchDirective = require('./search-directive'),
+      SearchMenuDirective = require('./search-menu-directive'),
       Service = require('./service'),
 
       //Init module
@@ -10,7 +11,8 @@ define(function(require) {
 
   
   //Register directives and services
-  module.directive('searchDirective', Directive);
+  module.directive('searchDirective', SearchDirective);
+  module.directive('searchMenuDirective', SearchMenuDirective);
   module.factory('searchService', Service);
 
   return module;

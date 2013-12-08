@@ -6,12 +6,14 @@ define(function(require) {
 
       // Screens
       HomeScreen = require('screens/home'),
+      TopScreen = require('screens/top'),
       SearchScreen = require('screens/search');
 
   angular.bootstrap(document, [
     'ngRoute',
     app.name,
     HomeScreen.name,
-    SearchScreen.name
+    SearchScreen.name,
+    TopScreen.name
   ]);
 });

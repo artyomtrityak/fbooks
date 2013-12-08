@@ -1,0 +1,17 @@
+<ul class="nav navbar-nav navbar-right" data-ng-show="showSearch">
+  <form class="navbar-form navbar-left" role="search">
+    <div class="form-group">
+      <input
+        data-ng-model="searchVal"
+        type="text"
+        class="form-control"
+        placeholder="Искать книги" />
+    </div>
+    <button
+      data-ng-click="onSearch(searchVal)"
+      type="button"
+      class="btn btn-default">
+      Найти
+    </button>
+  </form>
+</ul>
