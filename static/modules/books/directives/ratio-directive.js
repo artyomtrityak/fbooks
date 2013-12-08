@@ -1,9 +1,9 @@
 define(function(require) {
   'use strict';
 
-  var template = require('text!./templates/popular.html');
+  var template = require('text!./templates/ratio.html');
 
-  return ['booksService', function (booksService) {
+  return [function () {
     return {
         restrict: 'A',
         replace: true,
@@ -11,7 +11,7 @@ define(function(require) {
         scope: { 
         },
         link: function(scope, element, attrs, controller) {
-          scope.books = booksService.getTopBooks();
+          
         }
       };
   }];

@@ -5,37 +5,13 @@
   </div>
 
   <div class="row" data-ng-repeat-start="book in books">
-    <div class="col-md-2">
-      <img
-        src="http://placehold.it/70x60"
-        alt=""
-        class="img-rounded"
-      />
-    </div>
-    <div class="col-md-7">
-      <div class="f-ellipsis-text">
-        <a data-ng-href="#!/books/{{book.id}}" class="text-primary">
-          {{book.name}}
-        </a>
-      </div>
-      <div class="f-ellipsis-text">
-        <a data-ng-href="#!/authors/{{book.authorId}}" class="text-muted">
-          {{book.author}}
-        </a>
-      </div>
-      
-      <div ng-include="'books-ratio.html'"></div>
-
-    </div>
-    <div class="col-md-3 f-list-book-date">
-      {{book.date}}
-    </div>
+    <div ng-include="'book-item.html'"></div>
   </div>
 
   <hr data-ng-repeat-end="" />
 
   <div class="pull-right">
-    <a href="#!/books/popular">Еще</a>
+    <a href="#!/books/top">Еще</a>
   </div>
 
 </div>

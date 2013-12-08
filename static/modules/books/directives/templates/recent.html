@@ -4,4 +4,14 @@
     <h3>Новинки</h3> 
   </div>
 
+  <div class="row" data-ng-repeat-start="book in books">
+    <div ng-include="'book-item.html'"></div>
+  </div>
+
+  <hr data-ng-repeat-end="" />
+
+  <div class="pull-right">
+    <a href="#!/books/latest">Еще</a>
+  </div>
+
 </div>
