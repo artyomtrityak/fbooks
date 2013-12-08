@@ -9,6 +9,7 @@ define(function(require) {
       module = angular.module('search', []);
 
   
+  //Register directives and services
   module.directive('searchDirective', Directive);
   module.factory('searchService', Service);
 

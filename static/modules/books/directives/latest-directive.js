@@ -1,7 +1,7 @@
 define(function(require) {
   'use strict';
 
-  var template = require('text!./templates/recent.html');
+  var template = require('text!./templates/latest.html');
 
   return ['booksService', function (booksService) {
     return {
