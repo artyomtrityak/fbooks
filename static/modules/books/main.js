@@ -8,9 +8,9 @@ define(function(require) {
       Service = require('./services/service'),
 
       //Directives
-      PopularDirective = require('./directives/popular-directive'),
-      LatestDirective = require('./directives/latest-directive'),
-      RatioDirective = require('./directives/ratio-directive'),
+      PopularDirective = require('./directives/popular'),
+      LatestDirective = require('./directives/latest'),
+      RatioDirective = require('./directives/ratio'),
       bookItemTemplate = require('text!./directives/templates/book-item.html'),
 
       //Init module

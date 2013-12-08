@@ -2,7 +2,7 @@ define(function(require) {
   'use strict';
 
   var angular = require('angular'),
-      MainMenuDirective = require('./main-menu-directive'),
+      MainMenuDirective = require('./directives/main-menu'),
 
       searchModule = require('modules/search'),
       

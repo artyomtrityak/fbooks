@@ -1,7 +1,7 @@
 define(function(require) {
   'use strict';
 
-  var template = require('text!./templates/search.html');
+  var template = require('text!./templates/search-main.html');
 
   return ['searchService', '$location', function (searchService, $location) {
     return {
