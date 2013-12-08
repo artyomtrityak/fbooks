@@ -4,8 +4,10 @@ define(function(require) {
   var angular = require('angular'),
       Directive = require('./directive'),
 
+      searchModule = require('modules/search'),
       //Init module
-      module = angular.module('menu.Main', []);
+
+      module = angular.module('menu.Main', [searchModule.name]);
 
   module.directive('mainMenuDirective', Directive);
 

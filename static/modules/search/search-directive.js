@@ -3,18 +3,17 @@ define(function(require) {
 
   var template = require('text!./templates/search.html');
 
-  return ['searchService', function (searchService) {
+  return ['searchService', '$location', function (searchService, $location) {
     return {
         restrict: 'A',
         replace: true,
         template: template,
         scope: {
-           searchExample: '=',
-           onSearchDone: '&'
+           searchExample: '='
         },
         link: function(scope, element, attrs, controller) {
-          scope.onSearch = function() {
-            scope.onSearchDone({searchInput: scope.searchVal});
+          scope.onSearch = function(search) {
+            $location.path('/search').search({q: search});
           };
 
           scope.onTypeahead = function(searchVal) {
