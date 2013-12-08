@@ -2,7 +2,7 @@ define(function(require, exports, module) {
   'use strict';
 
   var angular = require('angular'),
-      serverMocks = require('shared/server-mocks'),
+      serverMocks = require('utils/server-mocks'),
       app = angular.module('AppMain', ['ngResource', 'ngRoute']),
       config = module.config() || {};
 

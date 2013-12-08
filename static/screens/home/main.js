@@ -5,16 +5,14 @@ define(function(require) {
       homeTemplate = require('text!./templates/home.html'),
       Controller = require('./controller'),
 
-      // Directives
-      mainMenuDirective = require('shared/directives/main-menu'),
-
       // Modules
       searchModule = require('modules/search'),
       booksModule = require('modules/books'),
+      menuModule = require('modules/menu'),
       
       //Init module
       module = angular.module('homeScreen', [
-        mainMenuDirective.name,
+        menuModule.name,
         searchModule.name,
         booksModule.name
       ]);

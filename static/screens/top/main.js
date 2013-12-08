@@ -5,15 +5,13 @@ define(function(require) {
       topTemplate = require('text!./templates/top.html'),
       Controller = require('./controller'),
 
-      // Directives
-      mainMenuDirective = require('shared/directives/main-menu'),
-
       // Modules
       booksModule = require('modules/books'),
+      menuModule = require('modules/menu'),
       
       //Init module
       module = angular.module('topScreen', [
-        mainMenuDirective.name,
+        menuModule.name,
         booksModule.name
       ]);
 

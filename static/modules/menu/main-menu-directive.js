@@ -1,7 +1,7 @@
 define(function(require) {
   'use strict';
 
-  var menuTemplate = require('text!./template.html');
+  var menuTemplate = require('text!./templates/main-menu.html');
 
   return function () {
     return {

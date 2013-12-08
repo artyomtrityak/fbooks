@@ -13,7 +13,9 @@ define(function(require) {
         },
         link: function(scope, element, attrs, controller) {
           scope.onSearch = function(search) {
-            $location.path('/search').search({q: search});
+            if (search) {
+              $location.path('/search').search({q: search});  
+            }
           };
 
           scope.onTypeahead = function(searchVal) {
