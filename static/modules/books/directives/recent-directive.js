@@ -11,7 +11,7 @@ define(function(require) {
         scope: {
         },
         link: function(scope, element, attrs, controller) {
-          
+          scope.books = booksService.getLatestBooks();
         }
       };
   }];

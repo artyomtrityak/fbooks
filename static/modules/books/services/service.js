@@ -9,8 +9,16 @@ define(function(require) {
       });
     };
 
+    var getLatestBooks = function() {
+      return booksModel.query({
+        limit: 20,
+        type: 'latest'
+      });
+    };
+
     return {
-      getTopBooks: getTopBooks
+      getTopBooks: getTopBooks,
+      getLatestBooks: getLatestBooks
     };
   }];
 });

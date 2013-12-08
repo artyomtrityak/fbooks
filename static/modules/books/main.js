@@ -2,7 +2,6 @@ define(function(require) {
   'use strict';
 
   var angular = require('angular'),
-      app = require('app'),
       Model = require('./services/model'),
       Service = require('./services/service'),
 
@@ -15,11 +14,12 @@ define(function(require) {
       //Init module
       module = angular.module('books', []);
 
-  app.run(['$templateCache', function($templateCache){
+  //Add templates for ngInclude to $templateCache
+  module.run(['$templateCache', function($templateCache){
     $templateCache.put('book-item.html', bookItemTemplate);
   }]);
-
   
+  //Register directives and services
   module.directive('booksPopularDirective', PopularDirective);
   module.directive('booksRecentDirective', RecentDirective);
   module.directive('booksRatioDirective', RatioDirective);
