@@ -2,7 +2,7 @@ define(function(require) {
   'use strict';
 
   var angular = require('angular'),
-      homeTemplate = require('text!./templates/home.html'),
+      screenTemplate = require('text!./template.html'),
       Controller = require('./controller'),
 
       // Modules
@@ -20,8 +20,8 @@ define(function(require) {
   module.config(['$routeProvider', function($routeProvider) {
       
     $routeProvider.when('/home', {
-      template: homeTemplate,
-      controller: 'homeScreen.HomeController'
+      template: screenTemplate,
+      controller: 'HomeController'
     });
 
     $routeProvider.otherwise({
@@ -30,7 +30,7 @@ define(function(require) {
     
   }]);
 
-  module.controller('homeScreen.HomeController', Controller);
+  module.controller('HomeController', Controller);
 
   return module;
 });

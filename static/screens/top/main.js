@@ -2,7 +2,7 @@ define(function(require) {
   'use strict';
 
   var angular = require('angular'),
-      topTemplate = require('text!./templates/top.html'),
+      screenTemplate = require('text!./template.html'),
       Controller = require('./controller'),
 
       // Modules
@@ -18,13 +18,13 @@ define(function(require) {
   module.config(['$routeProvider', function($routeProvider) {
       
     $routeProvider.when('/books/top', {
-      template: topTemplate,
-      controller: 'topScreen.TopController'
+      template: screenTemplate,
+      controller: 'TopController'
     });
     
   }]);
 
-  module.controller('topScreen.TopController', Controller);
+  module.controller('TopController', Controller);
 
   return module;
 });

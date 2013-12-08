@@ -2,7 +2,7 @@ define(function(require) {
   'use strict';
 
   var angular = require('angular'),
-      searchTemplate = require('text!./templates/search.html'),
+      screenTemplate = require('text!./template.html'),
       Controller = require('./controller'),
 
       // Modules
@@ -20,13 +20,13 @@ define(function(require) {
   module.config(['$routeProvider', function($routeProvider) {
       
     $routeProvider.when('/search', {
-      template: searchTemplate,
-      controller: 'searchScreen.SearchController'
+      template: screenTemplate,
+      controller: 'SearchController'
     });
     
   }]);
 
-  module.controller('searchScreen.SearchController', Controller);
+  module.controller('SearchController', Controller);
 
   return module;
 });
