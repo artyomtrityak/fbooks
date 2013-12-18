@@ -40,7 +40,8 @@ requirejs.config({
     //Modules
     'modules/search',
     'modules/books',
-    'modules/menu'
+    'modules/menu',
+    'modules/rating'
   ],
 
   deps: ['app']

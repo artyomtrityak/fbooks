@@ -9,12 +9,14 @@ define(function(require) {
       searchModule = require('modules/search'),
       booksModule = require('modules/books'),
       menuModule = require('modules/menu'),
+      ratingModule = require('modules/rating'),
       
       //Init module
       module = angular.module('homeScreen', [
         menuModule.name,
         searchModule.name,
-        booksModule.name
+        booksModule.name,
+        ratingModule.name
       ]);
 
   module.config(['$routeProvider', function($routeProvider) {
