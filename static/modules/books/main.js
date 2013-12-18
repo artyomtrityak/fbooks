@@ -22,9 +22,9 @@ define(function(require) {
   }]);
   
   //Register directives and services
-  module.directive('booksPopularDirective', PopularDirective);
-  module.directive('booksLatestDirective', LatestDirective);
-  module.directive('booksRatioDirective', RatioDirective);
+  module.directive('booksPopular', PopularDirective);
+  module.directive('booksLatest', LatestDirective);
+  module.directive('booksRatio', RatioDirective);
   module.factory('booksModel', Model);
   module.factory('booksService', Service);
 

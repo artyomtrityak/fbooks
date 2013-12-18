@@ -37,9 +37,6 @@ requirejs.config({
     'screens/top',
     'screens/search',
 
-    //Directives
-    'shared/directives/main-menu',
-
     //Modules
     'modules/search',
     'modules/books',

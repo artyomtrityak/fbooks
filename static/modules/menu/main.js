@@ -9,7 +9,7 @@ define(function(require) {
       //Init module
       module = angular.module('menu', [searchModule.name]);
 
-  module.directive('mainMenuDirective', MainMenuDirective);
+  module.directive('mainMenu', MainMenuDirective);
 
   return module;
 });

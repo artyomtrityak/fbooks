@@ -11,8 +11,8 @@ define(function(require) {
 
   
   //Register directives and services
-  module.directive('searchDirective', SearchDirective);
-  module.directive('searchMenuDirective', SearchMenuDirective);
+  module.directive('search', SearchDirective);
+  module.directive('searchMenu', SearchMenuDirective);
   module.factory('searchService', Service);
 
   return module;

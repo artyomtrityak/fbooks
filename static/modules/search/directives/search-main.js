@@ -5,7 +5,7 @@ define(function(require) {
 
   return ['searchService', '$location', function (searchService, $location) {
     return {
-        restrict: 'A',
+        restrict: 'E',
         replace: true,
         template: template,
         scope: {

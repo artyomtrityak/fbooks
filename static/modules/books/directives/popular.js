@@ -5,7 +5,7 @@ define(function(require) {
 
   return ['booksService', function (booksService) {
     return {
-        restrict: 'A',
+        restrict: 'E',
         replace: true,
         template: template,
         scope: { 
