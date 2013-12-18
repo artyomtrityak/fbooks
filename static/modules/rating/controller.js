@@ -4,9 +4,12 @@ define(function(require) {
   return ['$scope', '$attrs', '$parse', 'ratingConfig',
     function($scope, $attrs, $parse, ratingConfig) {
 
-    this.maxRange = angular.isDefined($attrs.max) ? $scope.$parent.$eval($attrs.max) : ratingConfig.max;
-    this.stateOn = angular.isDefined($attrs.stateOn) ? $scope.$parent.$eval($attrs.stateOn) : ratingConfig.stateOn;
-    this.stateOff = angular.isDefined($attrs.stateOff) ? $scope.$parent.$eval($attrs.stateOff) : ratingConfig.stateOff;
+    this.maxRange = angular.isDefined($attrs.max) ?
+      $scope.$parent.$eval($attrs.max) : ratingConfig.max;
+    this.stateOn = angular.isDefined($attrs.stateOn) ?
+      $scope.$parent.$eval($attrs.stateOn) : ratingConfig.stateOn;
+    this.stateOff = angular.isDefined($attrs.stateOff) ?
+      $scope.$parent.$eval($attrs.stateOff) : ratingConfig.stateOff;
 
     this.createRateObjects = function(states) {
       var defaultOptions = {
@@ -21,7 +24,10 @@ define(function(require) {
     };
 
     // Get objects used in template
-    $scope.range = angular.isDefined($attrs.ratingStates) ?  this.createRateObjects(angular.copy($scope.$parent.$eval($attrs.ratingStates))): this.createRateObjects(new Array(this.maxRange));
+    $scope.range = angular.isDefined($attrs.ratingStates) ?
+      this.createRateObjects(
+        angular.copy($scope.$parent.$eval($attrs.ratingStates))
+      ): this.createRateObjects(new Array(this.maxRange));
 
     $scope.rate = function(value) {
       //TODO: change this to send request to server
