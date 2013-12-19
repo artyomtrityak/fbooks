@@ -51,7 +51,12 @@ define(function(require) {
     };
 
     $scope.$watch('value', function(value) {
-      $scope.val = value;
+      $scope.val = Math.round(value);
+      $scope.realVal = value;
+    });
+
+    $scope.$watch('votes', function(votes) {
+      $scope.votes = votes;
     });
 
     $scope.readonly = false;

@@ -7,28 +7,36 @@ define(function(require) {
       name: 'Кардонийская рулетка',
       author: 'Вадим Панов',
       date: 'сентябрь 2012',
-      authorId: 1
+      authorId: 1,
+      rating: 4.8,
+      votes: 543
     },
     {
       id: 2,
       name: 'Заклинатели',
       author: 'Алексей Пехов',
       date: 'ноябрь 2011',
-      authorId: 2
+      authorId: 2,
+      rating: 4.3,
+      votes: 350
     },
     {
       id: 3,
       name: 'Огни небес',
       author: 'Роберт Джордан',
       date: 'апрель 1994',
-      authorId: 3
+      authorId: 3,
+      rating: 3.8,
+      votes: 566
     },
     {
       id: 4,
       name: 'Наложницы Ненависти',
       author: 'Вадим Панов',
       date: 'июнь 2003',
-      authorId: 1
+      authorId: 1,
+      rating: 3.4,
+      votes: 112
     }
   ];
 

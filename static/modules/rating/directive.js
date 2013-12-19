@@ -8,6 +8,7 @@ define(function(require) {
       restrict: 'EA',
       scope: {
         value: '=',
+        votes: '=',
         onHover: '&',
         onLeave: '&'
       },
